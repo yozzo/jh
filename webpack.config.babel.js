@@ -31,6 +31,15 @@ const babelLoaderConfigShared = {
   },
 };
 
+if (process.env.NODE_ENV === "production") {
+  config.devtool = ""; // No sourcemap for production
+
+  // Add more configuration for production here like
+  // SASS & CSS loaders
+  // Offline plugin
+  // Etc,
+}
+
 export default {
   entry: {
     app: [
